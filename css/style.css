@@ -95,11 +95,6 @@ html {
   border-radius: 10px;
   color: #CC9933;
   cursor: pointer;
-  transition: transform .1s ease;
-}
-
-.section-btn:hover {
-  transform: scale(.95);
 }
 
 .section-about-text,  .section-service-text , .section-advantage-text {
@@ -133,6 +128,7 @@ html {
 
 .logo:focus {
   outline: var(--link_outline-focus);
+  outline-offset: 5px;
 }
 
 .header-top-link {
@@ -154,6 +150,7 @@ html {
 .tel:focus {
   color: var(--link_color-hover-focus);
   outline: var(--link_outline-focus);
+  outline-offset: 5px;
 }
 
 .tel:active {
@@ -180,6 +177,7 @@ html {
 .user-cabinet:focus {
   color: var(--link_color-hover-focus);
   outline: var(--link_outline-focus);
+  outline-offset: 5px;
 }
 
 .user-cabinet:active {
@@ -249,6 +247,7 @@ html {
 .nav-header-link:focus {
   color: var(--link_color-hover-focus);
   outline: var(--link_outline-focus);
+  outline-offset: 5px;
 }
 
 .nav-header-link:active {
@@ -380,14 +379,23 @@ html {
 
 .section-offer-link {
   max-width: 98px;
-  display: flex;
-  align-items: center;
+/*   display: flex;
+  align-items: center; */
+  display: inline-block;
   font-size: 16px;
   line-height: 1;
   font-weight: 400;
   color: #FFCC66;
+  transition: transform 1s linear;
 }
 
+.section-offer-link:hover {
+  margin-right: 6px;
+}
+
+.section-offer-link ~ svg {
+  transform: translateY(5px);
+}
 
 .section-offer-link::before {
   content: "";
@@ -404,6 +412,7 @@ html {
 
 .section-offer-link:focus::before {
   outline: var(--link_outline-focus);
+  outline-offset: 5px;
 }
 
 
@@ -413,6 +422,7 @@ html {
 
 .section-offer-card:focus {
   outline: var(--link_outline-focus);
+  outline-offset: 5px;
 }
 
 
@@ -507,11 +517,19 @@ html {
 
 .section-service-link:focus::before {
   outline: var(--link_outline-focus);
+  outline-offset: 5px;
 }
 
-.section-service-link svg {
-  margin-left: 3px;
+.service-title svg {
   transform: translateY(4px);
+}
+
+.service-title:hover svg path {
+  stroke: var(--link-user-mail_color-hover);
+}
+
+.service-title:active svg path {
+  stroke: var(--link_color-acive);
 }
 
 .section-service-link:hover {
@@ -526,6 +544,16 @@ html {
   color: var(--link_color-acive);
   outline: none;
 }
+
+
+.service-title:hover {
+  color: var(--link-user-mail_color-hover);
+}
+
+.service-title a:hover {
+  margin-right: 6px;
+}
+
 
 /* --------icon------- */
 
@@ -784,6 +812,7 @@ html {
 
 .section-placement-link:focus::before {
   outline: var(--link_outline-focus);
+  outline-offset: 5px;
 }
 
 .section-placement-link:focus {
@@ -823,9 +852,6 @@ html {
   display: flex;
 }
 
-.form:focus-within {
-  outline: var(--link_outline-focus);
-}
 
 .tour-form-list {
   display: flex;
@@ -888,6 +914,16 @@ html {
   background: url(../img/input-arrow.svg);
   background-repeat: no-repeat;
   background-position: right;
+}
+
+.tour-form-select:focus {
+  outline: var(--link_outline-focus);
+  outline-offset: 5px;
+}
+
+.tour-form-input:focus {
+  outline: var(--link_outline-focus);
+  outline-offset: 5px;
 }
 
 .tour-form-input {
@@ -1018,6 +1054,7 @@ html {
 .contacts-item-link:focus {
   color: var(--link_color-hover-focus);
   outline: var(--link_outline-focus);
+  outline-offset: 5px;
 }
 
 .contacts-item-link:active {
@@ -1130,6 +1167,7 @@ html {
 .footer-left-link:focus {
   color: var(--link_color-hover-focus);
   outline: var(--link_outline-focus);
+  outline-offset: 5px;
 }
 
 .footer-left-link:active {
@@ -1174,6 +1212,7 @@ html {
 .footer-middle-link:focus {
   color: var(--link_color-hover-focus);
   outline: var(--link_outline-focus);
+  outline-offset: 5px;
 }
 
 .footer-middle-link:active {
